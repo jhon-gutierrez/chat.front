@@ -5,7 +5,6 @@ export async function createUser(userData) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'https://chat-front-henna.vercel.app',
         },
         body: JSON.stringify(userData),
     };
