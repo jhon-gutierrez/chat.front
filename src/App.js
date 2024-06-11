@@ -10,7 +10,7 @@ function App() {
     <Router >                
       <div className='App'>   
         <Routes>
-          <Route path='/' exact Component={Home}/>    {/* Define una ruta para el componente Home */}
+          <Route path='/' exact Component={Home}/>  
           <Route path='/chat-room' exact Component={ChatRoom}/>
         </Routes>
       </div>
