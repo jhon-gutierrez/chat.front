@@ -7,8 +7,8 @@ import './App.css';
 function App() {
   return (
 
-    <Router >                {/*Envuelve la aplicación para habilitar la funcionalidad de enrutamiento*/}
-      <div className='App'>   {/* Define las rutas de la aplicación */}
+    <Router >                
+      <div className='App'>   
         <Routes>
           <Route path='/' exact Component={Home}/>    {/* Define una ruta para el componente Home */}
           <Route path='/chat-room' exact Component={ChatRoom}/>

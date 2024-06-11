@@ -35,7 +35,7 @@ const Chatroom = () => {
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (message) {
-      emitEvent('sendMessage', { nickName, message });
+      emitEvent('sendMessage', { message, nickName });
       //const result = await sendMessage(message,nickName);
       setMessage('');
     }
