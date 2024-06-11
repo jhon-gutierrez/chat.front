@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './pages.css';
 import { createUser } from '../services/userService';
 import constants from '../utils/constants';
+import '../pages/pages.css';
 
 const Home = () => {
+
   const [nickName, setNickName] = useState('');
   const navigate = useNavigate();
 
+  
   const joinChat = async (e) => {
+    
     e.preventDefault();
+
     try {
       const result = await createUser({ nickName });
+
       if (result.status === constants.STATUSES.OK) {
         navigate(`/chat-room?nickname=${nickName}`);
       }
+
     } catch (error) {
       console.log(error)
     }

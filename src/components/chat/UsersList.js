@@ -2,8 +2,11 @@ import React from 'react';
 
 const UsersList = ({users}) => {
     return (
-        <div className='users-list'>
-            <h2>Usuarios</h2>
+        <div className='user-list'>
+            <div className='user-header'> 
+                <h2>Usuarios conectados</h2>
+            </div>
+            
             <ul>
                 {users.map(user => (
                     <li key={user.id}>{user.nickName}</li>

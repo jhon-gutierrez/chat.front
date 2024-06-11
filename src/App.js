@@ -7,10 +7,10 @@ import './App.css';
 function App() {
   return (
 
-    <Router >
-      <div className='App'>
+    <Router >                {/*Envuelve la aplicación para habilitar la funcionalidad de enrutamiento*/}
+      <div className='App'>   {/* Define las rutas de la aplicación */}
         <Routes>
-          <Route path='/' exact Component={Home}/>
+          <Route path='/' exact Component={Home}/>    {/* Define una ruta para el componente Home */}
           <Route path='/chat-room' exact Component={ChatRoom}/>
         </Routes>
       </div>

@@ -1,16 +1,18 @@
 import React from 'react';
+import Message from './Message';
 
 const Messages = ({ messages }) => {
     return (
-        <div>
-            <h2>Mensajes</h2>
+        
+        <div className="messages">
             <ul>
                 {messages.map((msg, index) => (
-                    <li key={index}><strong>{msg.nickName}:</strong> {msg.message}</li>
+                    <li key={index}> <Message user={msg.nickName} text={msg.message} type='sent' status='read'/> </li>
                 ))}
             </ul>
         </div>
     );
 };
+
 
 export default Messages;
